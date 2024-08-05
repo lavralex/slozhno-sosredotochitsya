@@ -1,4 +1,5 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --main-text-size: 18px;
+  --main-text-font: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  --decorated-zone-inset-block: 10px;
+}
