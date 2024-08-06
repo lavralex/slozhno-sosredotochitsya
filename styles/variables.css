@@ -1,5 +1,11 @@
 :root {
   --main-text-size: 18px;
-  --main-text-font: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  --main-text-font: "IBM Plex Mono", monospace;
   --decorated-zone-inset-block: 10px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --decorated-zone-inset-block: 20px;
+  }
 }

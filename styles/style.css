@@ -2,6 +2,7 @@
   color: var(--description-color);
   font-family: var(--main-text-font);
   background: var(--background);
+  background-color: var(--main-background-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -14,16 +15,15 @@
 
 .description-link {
   text-decoration: none;
-  text-shadow: 1.5px 1.5px var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .description-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  border-block-end: 1px solid var(--description-color);
 }
 
 .description-link:focus {
-  outline: 1px solid var(--decor-color);
+  outline: 1px solid var(--link-outline-focus-color);
   line-height: 0;
 }
 
@@ -36,6 +36,7 @@
   display: grid;
   grid-template-rows: minmax(238px, min-content) minmax(192px, min-content) min-content;
   min-block-size: 668px;
+  block-size: 100vh;
 }
 
 .decorated-zone::after {
@@ -112,6 +113,7 @@
   font-size: var(--main-text-size);
   text-transform: lowercase;
   background-color: transparent;
+  cursor: pointer;
   min-inline-size: 70px;
   min-block-size: 25px;
 }
@@ -126,6 +128,11 @@
 }
 
 .header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--decor-color);
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--decor-color);
 }
 
@@ -152,13 +159,13 @@
 
 .main {
   display: grid;
-  gap: 52px;
+  gap: 50.5px;
   margin-block-start: 40px;
 }
 
 .content-section {
   display: grid;
-  gap: 20px;
+  gap: 21px;
 }
 
 .content-section__heading {
@@ -186,8 +193,13 @@
   line-height: 23.4px;
 }
 
-.gallery-section {
-  margin-block-start: -3px;
+.tips-column {
+  display: grid;
+  gap: 20px;
+}
+
+.tips-heading {
+  font-weight: 400;
 }
 
 .gallery {
@@ -202,7 +214,8 @@
   justify-content: center;
   align-items: center;
   margin-block-start: 40px;
-  block-size: 667px;
+  min-block-size: 668px;
+  block-size: 100vh;
 }
 
 .footer__focus {
@@ -210,14 +223,12 @@
 }
 
 .image {
+  object-fit: cover;
+  object-position: center;
   inline-size: 100%;
 }
 
 @media (min-width: 768px) {
-  :root {
-    --decorated-zone-inset-block: 20px;
-  }
-
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -228,10 +239,9 @@
 
   .header {
     grid-template-rows:
-      minmax(463px, min-content)
+      minmax(462px, min-content)
       minmax(99px, min-content)
       min-content;
-    min-block-size: 1024px;
   }
 
   .header__light-bulb {
@@ -244,7 +254,6 @@
 
   .header__title {
     margin-inline-start: -20px;
-    margin-block-start: -1px;
   }
 
   .header__description {
@@ -253,7 +262,6 @@
   }
 
   .main {
-    display: grid;
     gap: 80px;
     margin-block-start: 60px;
   }
@@ -267,7 +275,8 @@
   }
 
   .attention-distractors .content-section__heading {
-    inline-size: 236px;
+    max-inline-size: 236px;
+    inline-size: 100%;
   }
 
   .focus-tips {
@@ -312,22 +321,17 @@
   }
 
   .image {
-    object-fit: cover;
     block-size: 100%;
   }
 
   .footer {
     margin-block-start: 60px;
-    min-block-size: 1024px;
   }
 }
 
 @media (min-width: 1024px) {
   .header {
-    position: relative;
-    display: grid;
     grid-template-rows: minmax(319px, min-content) minmax(130px, min-content) min-content;
-    min-block-size: 768px;
   }
 
   .header__theme-menu {
@@ -335,10 +339,8 @@
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 11px;
   }
 
   .header__description {
@@ -349,7 +351,7 @@
     gap: 10px;
   }
   .attention-distractors .content-section__heading {
-    inline-size: 315px;
+    max-inline-size: 315px;
   }
 
   .attention-distractors .content-section__description-list {
@@ -362,11 +364,7 @@
     min-block-size: 1091px;
   }
 
-  .footer {
-    min-block-size: 768px;
-  }
-
   .gallery {
-    gap: 22px;
+    gap: 22.5px;
   }
 }

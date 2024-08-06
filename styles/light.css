@@ -2,11 +2,14 @@
   --text-and-decor-color: #353430;
   --accent-color: #ff8dcb;
   --decor-color: var(--text-and-decor-color);
+  --main-background-color: #fff1f7;
   --background: url(../images/cover-image-light.png) center / cover;
+  --title-shadow-color: #ff0070;
   --description-color: var(--text-and-decor-color);
   --heading-background-color: var(--accent-color);
   --main-title-color: #ffc2e6;
   --light-bulb-display: none;
+  --link-outline-focus-color: var(--text-and-decor-color);
   --button-hover-color: #32312d66;
   --section-heading-text-color: var(--text-and-decor-color);
 }
@@ -16,11 +19,14 @@
     --text-and-decor-color: #353430;
     --accent-color: #ff8dcb;
     --decor-color: var(--text-and-decor-color);
+    --main-background-color: #fff1f7;
     --background: url(../images/cover-image-light.png) center / cover;
+    --title-shadow-color: #ff0070;
     --description-color: var(--text-and-decor-color);
     --heading-background-color: var(--accent-color);
     --main-title-color: #ffc2e6;
     --light-bulb-display: none;
+    --link-outline-focus-color: var(--text-and-decor-color);
     --button-hover-color: #32312d66;
     --section-heading-text-color: var(--text-and-decor-color);
   }
