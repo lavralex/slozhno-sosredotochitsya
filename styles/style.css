@@ -34,7 +34,7 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: minmax(238px, min-content) minmax(192px, min-content) min-content;
+  grid-template-rows: 1fr min-content 1fr;
   min-block-size: 668px;
   block-size: 100vh;
 }
@@ -155,6 +155,7 @@
   margin-block-start: 55px;
   line-height: 23.4px;
   max-inline-size: 355px;
+  block-size: fit-content;
 }
 
 .main {
@@ -237,13 +238,6 @@
     padding-inline: 20px;
   }
 
-  .header {
-    grid-template-rows:
-      minmax(462px, min-content)
-      minmax(99px, min-content)
-      min-content;
-  }
-
   .header__light-bulb {
     inset-block-start: 20px;
   }
@@ -257,7 +251,7 @@
   }
 
   .header__description {
-    margin-block-start: 162px;
+    margin-block-start: max(15.8vh, 105.5px);
     max-inline-size: 364px;
   }
 
@@ -297,7 +291,7 @@
       "tape street street";
     gap: 20px;
     margin-block-start: 20px;
-    block-size: 780px;
+    min-block-size: 780px;
   }
 
   .gallery__sunset-image {
@@ -330,10 +324,6 @@
 }
 
 @media (min-width: 1024px) {
-  .header {
-    grid-template-rows: minmax(319px, min-content) minmax(130px, min-content) min-content;
-  }
-
   .header__theme-menu {
     padding-block-start: 19px;
   }
@@ -358,10 +348,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-block-start: 11px;
-  }
-
-  .gallery-section {
-    min-block-size: 1091px;
   }
 
   .gallery {
